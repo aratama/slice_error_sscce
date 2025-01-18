@@ -5,4 +5,4 @@ edition = "2021"
 
 [dependencies]
 bevy = "0.15.0"
-bevy_aseprite_ultra = { path = "../bevy_aseprite_ultra" }
+bevy_aseprite_ultra = "0.4.1"
