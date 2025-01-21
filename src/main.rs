@@ -11,9 +11,8 @@ fn setup(mut commands: Commands, asset_server: Res<AssetServer>) {
     });
 }
 
-fn update(mut commands: Commands, mut query: Query<(Entity, &mut AseSpriteSlice)>) {
-    for (entity, mut slice) in query.iter_mut() {
-        slice.name = "slice_blue".into();
+fn update(mut commands: Commands, mut query: Query<Entity, With<AseSpriteSlice>>) {
+    for entity in query.iter_mut() {
         commands.entity(entity).despawn_recursive();
     }
 }
